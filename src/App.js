@@ -1,23 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Sidebar from './Sidebar';
+
+const defaultComponents = [
+  { id: 'comp-1', name: 'Component 1' },
+  { id: 'comp-2', name: 'Component 2' },
+  { id: 'comp-3', name: 'Component 3' },
+];
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Sidebar defaultComponents={defaultComponents} />
     </div>
   );
 }
